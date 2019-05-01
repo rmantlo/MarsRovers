@@ -17,7 +17,7 @@ export class SpiritComponent implements OnInit {
       data => {
         let dataRover: any = data;
         this.spirit = dataRover.rover;
-        console.log(data);
+        //console.log(data);
       }
     )
   }

@@ -1,6 +1,6 @@
-nav {
+
+.nav {
     display: flex;
-    background-color: rgb(59, 59, 97);
     justify-content: center;
 }
 ul{
@@ -20,4 +20,15 @@ button {
 }
 button:focus{
     outline: none;
+}
+.homeBtn {
+    position: relative;
+    color: whitesmoke;
+    background-color: rgb(68, 53, 94);
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 10px;
 }

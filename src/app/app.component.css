@@ -12,12 +12,4 @@ p{
     bottom: 0;
     color:white;
 }
-button {
-    position: absolute;
-    bottom: 5px;
-    width: 60px;
-    height: 30px;
-    border: none;
-    border-radius: 5px;
-    padding: 5px
-}
+

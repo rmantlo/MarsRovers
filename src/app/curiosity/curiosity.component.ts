@@ -17,7 +17,7 @@ export class CuriosityComponent implements OnInit {
       data => {
         let dataRover: any = data;
         this.curiosity = dataRover.rover;
-        console.log(data);
+        //console.log(data);
       }
     )
   }

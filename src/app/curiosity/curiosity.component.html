@@ -1,0 +1,21 @@
+<div class='container'>
+  <div *ngIf='curiosity'>
+    <h1>{{ curiosity.name }}</h1>
+    <p>Status: {{ curiosity.status }}</p>
+    <p>Landed on Mars: {{ curiosity.landing_date }}</p>
+    <form (ngSubmit)='onSubmit(curiosityInput.value)'>
+      <label for='sol'>Sol Number: </label>
+      <input type='text' #curiosityInput placeholder='max sol is {{ curiosity.max_sol}}'>
+      <button type='submit'>Enter</button>
+    </form>
+  </div>
+  <div *ngIf='curiosityP'>
+    <div style='margin-top: 10px' *ngIf='curiosityP.length === 0'>
+      <h2>No photos on this sol</h2>
+    </div>
+    <div *ngFor='let p of curiosityP' class='card'>
+      <img src='{{p.img_src}}' alt=''>
+      <p>{{ p.earth_date }}</p>
+    </div>
+  </div>
+</div>

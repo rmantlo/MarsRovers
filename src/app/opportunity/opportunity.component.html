@@ -1,0 +1,30 @@
+<div class='container'>
+  <div *ngIf='opportunity'>
+    <h1>{{opportunity.name}}</h1>
+    <p>Status: {{opportunity.status}}</p>
+    <p>Landed on Mars: {{opportunity.landing_date}}</p>
+    <form (ngSubmit)='onSubmit(opportunityInput.value)'>
+      <label for='sol'>Sol number: </label>
+      <input #opportunityInput name='sol' max="{{opportunity.max_sol}}" type='text'
+        placeholder='max sol is {{ opportunity.max_sol }}'>
+      <button type='submit'>Enter</button>
+    </form>
+  </div>
+  <div *ngIf='opportunityP'>
+    <div style='margin-top: 10px' *ngIf='opportunityP.length === 0'>
+      <h2>No photos on this sol</h2>
+    </div>
+    <div class='card' *ngFor='let p of opportunityP'>
+      <img src='{{ p.img_src }}' alt=''>
+      <p>{{ p.earth_date }}</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- <div *ngFor='let data of opportunity'>
+  <p>{{data.id}}</p> //for Photos later
+</div> -->

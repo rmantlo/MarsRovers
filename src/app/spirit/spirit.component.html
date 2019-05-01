@@ -1,0 +1,23 @@
+<div class='container'>
+  <div *ngIf='spirit'>
+    <h1>{{spirit.name}}</h1>
+    <p>Status: {{ spirit.status }}</p>
+    <p>Last functioning date: {{ spirit.max_date }}</p>
+    <p>Landed on Mars: {{ spirit.landing_date }}</p>
+    <form (ngSubmit)='onSubmit(spiritInput.value)'>
+      <label for='sol'>Sol Number: </label>
+      <input #spiritInput name='sol' max="{{ spirit.max_sol }}" type='text'
+        placeholder='max sol is {{ spirit.max_sol }}'>
+      <button type='submit'>Enter</button>
+    </form>
+  </div>
+  <div *ngIf='spiritP'>
+    <div style='margin-top: 10px' *ngIf='spiritP.length === 0'>
+      <h2>No photos on this sol</h2>
+    </div>
+    <div class='card' *ngFor='let p of spiritP'>
+      <img src='{{ p.img_src }}'>
+      <p>{{ p.earth_date }}</p>
+    </div>
+  </div>
+</div>

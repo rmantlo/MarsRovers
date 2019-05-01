@@ -1,0 +1,21 @@
+button{
+    margin-left:10px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px
+}
+
+.container{
+    margin: auto auto;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+.card{
+    display:inline-block;
+    box-shadow: 0 0.5em 0.5em rgba(0,0,0,0.6);
+    margin: 5px;
+    min-width:300px;
+    width: 30vw;
+    text-align: center;
+}

@@ -1,0 +1,23 @@
+.wrapper{
+    position: fixed;
+    text-align:center;
+    background-image: url('../assets/space.jpg');
+    background-size: cover;
+    width:100vw;
+    height: 100vh;
+    overflow: auto;
+}
+p{
+    position: absolute;
+    bottom: 0;
+    color:white;
+}
+button {
+    position: absolute;
+    bottom: 5px;
+    width: 60px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px
+}
